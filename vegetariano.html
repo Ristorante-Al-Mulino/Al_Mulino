@@ -4,17 +4,37 @@
     <meta charset="UTF-8">
     <title>Menu Vegetariano - Al Mulino</title>
     <style>
-        body { font-family: 'Georgia', serif; padding: 20px; background: #f0f9f0; color: #2d3436; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        /* Sfondo pagina verde chiarissimo (quasi impercettibile) per richiamare il tema veg */
+        body { font-family: 'Georgia', serif; padding: 20px; background: #f0f9f0; color: #2d3436; line-height: 1.6; }
+        
+        .container { max-width: 800px; margin: auto; background: lightgray; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
         h1 { color: #27ae60; text-align: center; border-bottom: 2px solid #27ae60; padding-bottom: 10px; }
-        h2 { color: #2ecc71; border-bottom: 1px solid #eee; margin-top: 30px; }
+        
+        /* CORREZIONE h2: Senza sfondo, integrato nel lightgray */
+        h2 { 
+            color: #27ae60; 
+            background: transparent; 
+            border-bottom: 2px solid #27ae60; 
+            margin-top: 40px; 
+            padding: 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+        }
+
         .dish { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; padding: 10px; transition: 0.3s; }
-        .dish:hover { background-color: #fff9e6; transform: scale(1.02); border-radius: 5px; }
+        
+        /* Effetto hover più elegante sul grigio */
+        .dish:hover { background-color: rgba(39, 174, 96, 0.1); transform: scale(1.01); border-radius: 5px; }
+        
         .dish-info { flex: 1; }
         .dish-name { font-weight: bold; font-size: 1.1em; display: block; }
-        .desc { font-style: italic; font-size: 0.9em; color: #666; }
-        .price { font-weight: bold; color: #27ae60; margin-left: 15px; }
-        .back { display: inline-block; margin-top: 30px; padding: 10px 20px; background: #2980b9; color: white !important; text-decoration: none; border-radius: 5px; }
+        .desc { font-style: italic; font-size: 0.9em; color: #555; }
+        .price { font-weight: bold; color: #27ae60; margin-left: 15px; font-size: 1.1em; }
+        
+        .back { display: inline-block; margin-top: 30px; padding: 12px 25px; background: #27ae60; color: white !important; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        .back:hover { background: #1e8449; }
     </style>
 </head>
 <body>
@@ -36,7 +56,7 @@
         <h2>I Dolci</h2>
         <div class="dish"><div class="dish-info"><span class="dish-name">Tutte le Delizie del Mulino</span></div><span class="price">€ 5,00</span></div>
 
-	<h2>Bevande</h2>
+        <h2>Bevande</h2>
         <div class="dish"><div class="dish-info"><span class="dish-name">Acqua Minerale (0.75cl)</span></div><span class="price">€ 2,50</span></div>
         <div class="dish"><div class="dish-info"><span class="dish-name">Vino della Casa (1L)</span></div><span class="price">€ 8,00</span></div>
         <div class="dish"><div class="dish-info"><span class="dish-name">Birra / Bibite</span></div><span class="price">€ 3,50</span></div>
